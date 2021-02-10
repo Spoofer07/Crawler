@@ -73,7 +73,7 @@ public class MovieMain {
 	public static Product getProduct() {
 		Document prodResponse = null;
 		Product product = new Product();
-		String url = "https://www.pcgarage.ro/casti-gaming/redragon/talos-cu-stand-spectre/";
+		String url = "https://www.pcgarage.ro/placi-video/gigabyte/geforce-rtx-2070-super-windforce-oc-3x-8gb-gddr6-256-bit/";
 		try {
 			prodResponse = Jsoup.connect(url).get();
 		} catch (IOException e) {

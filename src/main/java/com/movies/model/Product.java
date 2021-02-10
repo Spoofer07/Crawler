@@ -10,12 +10,13 @@ public class Product {
 	private Date currentDate;
 	private String priceOld;
 	private String Discount;
+	private Boolean isInStock;
 
 	public Product() {
 	}
 
-
-	public Product(String name, String link, String price, Date currentDate, String priceOld, String discount) {
+	public Product(String name, String link, String price, Date currentDate, String priceOld, String discount,
+			Boolean isInStock) {
 		super();
 		this.name = name;
 		this.link = link;
@@ -23,28 +24,32 @@ public class Product {
 		this.currentDate = currentDate;
 		this.priceOld = priceOld;
 		Discount = discount;
+		this.isInStock = isInStock;
 	}
 
+	public Boolean getIsInStock() {
+		return isInStock;
+	}
+
+	public void setIsInStock(Boolean isInStock) {
+		this.isInStock = isInStock;
+	}
 
 	public String getPriceOld() {
 		return priceOld;
 	}
 
-
 	public String getDiscount() {
 		return Discount;
 	}
-
 
 	public void setPriceOld(String priceOld) {
 		this.priceOld = priceOld;
 	}
 
-
 	public void setDiscount(String discount) {
 		Discount = discount;
 	}
-
 
 	public String getName() {
 		return name;
@@ -81,7 +86,7 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [\nname=" + name + ", \nlink=" + link + ", \nprice=" + price + ", \ncurrentDate=" + currentDate
-				+ ", \npriceOld=" + priceOld + ", \nDiscount=" + Discount + "\n]";
+				+ ", \npriceOld=" + priceOld + ", \nDiscount=" + Discount + ", \nisInStock=" + isInStock + "]";
 	}
 
 }
